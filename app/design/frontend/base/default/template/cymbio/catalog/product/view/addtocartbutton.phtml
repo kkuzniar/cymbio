@@ -1,0 +1,12 @@
+<?php $_product = $this->getProduct(); ?>
+
+<?php $buttonTitle = Mage::helper('core')->quoteEscape($this->__('Add to Cart ( Cymbio )'), true); ?>
+<div class="add-to-cart">
+    <div class="add-to-cart-buttons">
+        <button id="sendProductDataToCymbio" type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart">
+            <span>
+                <span><?php echo $buttonTitle ?></span>
+            </span>
+        </button>
+    </div>
+</div>

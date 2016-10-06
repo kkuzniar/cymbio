@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Polcode_Cymbio>
+            <version>0.1.0</version>
+        </Polcode_Cymbio>
+    </modules>
+    <global>
+        <models>
+            <cymbio>
+                <class>Polcode_Cymbio_Model</class>
+                <resourceModel>cymbio_resource</resourceModel>
+            </cymbio>
+            
+            <cymbio_resource>
+                <class>Polcode_Cymbio_Model_Resource</class>
+                <entities>
+                    <cymbioEvents>
+                        <table>cymbio_events</table>
+                    </cymbioEvents>
+                </entities>
+            </cymbio_resource>
+        </models>
+        
+        <helpers>
+            <cymbio>
+                <class>Polcode_Cymbio_Helper</class>
+            </cymbio>
+        </helpers>
+        
+        <blocks>
+            <cymbio>
+                <class>Polcode_Cymbio_Block</class>
+            </cymbio>
+        </blocks>
+        
+        <resources>
+            <cymbio_setup>
+                <setup>
+                    <module>Polcode_Cymbio</module>
+                    <class>Polcode_Cymbio_Model_Resource_Setup</class>
+                </setup>
+            </cymbio_setup>
+        </resources>
+    </global>
+    
+    <frontend>
+        <layout>
+            <updates>
+                <cymbio>
+                    <file>cymbio.xml</file>
+                </cymbio>
+            </updates>
+        </layout>
+        <events>
+            <checkout_cart_product_add_after>
+                <observers>
+                    <cymbio_send_request_api_database>
+                        <class>cymbio/observer</class>
+                        <method>cymbioApiProductAddAfter</method>
+                    </cymbio_send_request_api_database>
+                </observers>
+            </checkout_cart_product_add_after>
+        </events>
+    </frontend>
+</config>

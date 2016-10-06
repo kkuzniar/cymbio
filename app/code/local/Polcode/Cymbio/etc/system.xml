@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <cymbio translate="label" module="cymbio">
+            <label>Cymbio Settings</label>
+            <sort_order>200</sort_order>
+        </cymbio>
+    </tabs>
+    <sections>
+        <cymbio translate="label" module="cymbio">
+            <label>Cymbio Custom Settings</label>
+            <tab>cymbio_queue</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>40</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <cymbio_api_url translate="label comment">
+                            <label>Cymbio API Url</label>
+                            <comment>For example: https://server-staging.cym.bio/v1/events/</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-url</validate>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cymbio_api_url>
+                    </fields>
+                </settings>
+            </groups>
+        </cymbio>
+    </sections>
+</config>
